@@ -1,0 +1,102 @@
+
+import { StyleSheet } from 'react-native';
+ 
+const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    backgroundColor:'#fff'
+  },
+  containerHeader:{
+      justifyContent:'flex-start',
+      padding:23,
+      paddingTop:44
+  },
+  containerHeaderLogo:{
+       width:18,
+       height:25
+  },
+  containerBody:{
+   justifyContent:'flex-start',
+   flexDirection:'row',
+   alignItems:'center',
+   paddingLeft:23,
+   marginBottom:30
+  },
+  containerBodyIcon:{
+    width:28,
+    height:25
+  },
+  containerBodyTitle:{
+    fontSize:25,
+    color:'#000',
+    fontFamily:'muli-extrabold',
+    left:10
+  },
+  containerForm:{
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  containerFormBodyBottomText:{
+    fontSize:14,
+    color:'#fff',
+    fontFamily:'Roboto-Bold',
+    marginLeft:110
+  },
+  containerFormBottom:{
+    width:343,
+    height:60,
+    backgroundColor:'#191921',
+    borderRadius:73,
+   
+    justifyContent:'space-between',
+    alignItems:'center',
+    flexDirection:'row',
+    marginBottom:10,
+    paddingHorizontal:30
+  },
+  footer:{
+    justifyContent:'center',
+    alignItems:'center',
+    height:210,
+    backgroundColor:'#fff',
+  },
+  containerSelfie:{
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  containerSelfieIcon:{
+      width:100,
+      height:150,
+      marginBottom:60
+  },
+  containerSelfieTitle:{
+        fontSize:20,
+        color:'#000000',
+        fontFamily:'muli-regular',
+        textAlign:'left',
+        paddingLeft:23,
+  },
+  containerSelfieDescrip:{
+    fontSize:20,
+    color:'#000000',
+    fontFamily:'muli-bold',
+    textAlign:'left',
+    paddingLeft:23,
+    marginTop:30,
+    maxWidth:320,
+  },
+  footerTitle:{
+         fontSize:14,
+        color:'#000000',
+        fontFamily:'muli-regular',
+        textAlign:'left',
+        marginBottom:10
+  },
+  containerFooterBottomIcon:{
+    width:32,
+    height:17,
+  }
+
+});
+
+export default styles;

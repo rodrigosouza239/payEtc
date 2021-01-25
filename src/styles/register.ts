@@ -1,0 +1,107 @@
+
+import { StyleSheet } from 'react-native';
+ 
+const styles = StyleSheet.create({
+  container:{
+    flex:1
+  },
+  containerHeader:{
+      justifyContent:'flex-start',
+      padding:23,
+      paddingTop:44
+  },
+  containerHeaderLogo:{
+       width:18,
+       height:25
+  },
+  containerBody:{
+    position:'absolute',
+    marginTop:100,
+    paddingLeft:23,
+  },
+  containerBodyTitle:{
+    fontSize:36,
+    color:'#000',
+    fontFamily:'muli-extrabold',
+    marginBottom:20
+  },
+  containerBodyLabel:{
+    fontSize:18,
+    color:'#4D4D4D',
+    fontFamily:'Roboto-Regular',
+    marginBottom:10,
+  },
+  containerBodyLabelBold:{
+    fontSize:18,
+    color:'#4D4D4D',
+    fontFamily:'Roboto-Bold',
+    marginBottom:10,
+    paddingLeft:10
+  },
+  containerBodyText:{
+    fontSize:18,
+    color:'#4D4D4D',
+    fontFamily:'Roboto-Regular',
+    marginBottom:10,
+    maxWidth:330
+  },
+  containerBodyForm:{
+    flexDirection:'row'
+  },
+  containerForm:{
+    marginTop:20
+  },
+  containerFormBottom:{
+     justifyContent:'flex-start',
+     alignItems:'flex-start',
+     flexDirection:'row',
+     marginBottom:30
+  },
+  containerFormIcons:{
+     maxWidth:29,
+     maxHeight:27,
+     marginTop:10
+      },
+      containerFormIcon1:{
+        maxWidth:27,
+        maxHeight:27,
+        marginTop:10
+      },
+  containerFormTitle:{
+    fontSize:16,
+    color:'#000',
+    fontFamily:'muli-extrabold',
+   
+     textAlign:'left',
+     marginTop:10,
+     marginLeft:20
+  },
+  containerFooterFormBottom:{
+    position:'absolute',
+    marginTop:370,
+  },
+  containerFooterBottom:{
+    width:343,
+    height:60,
+    backgroundColor:'#191921',
+    borderRadius:73,
+    
+    justifyContent:'space-between',
+    alignItems:'center',
+    flexDirection:'row',
+    marginBottom:10,
+    paddingHorizontal:30
+  },
+  containerFooterBottomText:{
+    fontSize:16,
+    color:'#fff',
+    fontFamily:'Roboto-Bold',
+    marginLeft:110
+  },
+  containerFooterBottomIcon:{
+    width:32,
+    height:17
+},
+});
+
+export default styles;
