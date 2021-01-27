@@ -12,11 +12,13 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Home from '../pages/Home';
+import Welcome from '../pages/Welcome';
 
 //import views
 import PageDados from '../Views/PageDados';
 import PageCit from '../Views/PageCit';
 import PageFoto from '../Views/PageFoto';
+
 
 //componentes 
 import Camera from '../components/Camera';
@@ -32,6 +34,8 @@ export default function Routes() {
       <Screen name="Home" component={Home} />
       <Screen name="Login" component={Login} />
       <Screen name="Register" component={Register} />
+      <Screen name="Welcome" component={Welcome} />
+       {/* /page components/ */}
       <Screen name="Camera" component={Camera} />
       {/* /page views/ */}
       <Screen name="PageDados" component={PageDados} />

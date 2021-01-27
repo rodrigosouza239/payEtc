@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { StatusBar, View, Text, TextInput, TouchableOpacity, Image, Switch } from 'react-native';
-
+import { useNavigation } from '@react-navigation/native';
 
 import Logo from '../../assets/logoblack.png';
 
@@ -10,6 +10,13 @@ import styles from '../../styles/login';
 const Login = () => {
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+
+  const { navigate } = useNavigation();
+
+  function hadleNavigateToWelcome() {
+    navigate('Welcome')
+  }
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -42,7 +49,7 @@ const Login = () => {
             </TouchableOpacity>
           </View>
 
-          <TouchableOpacity style={styles.containerFormBottom}>
+          <TouchableOpacity onPress={hadleNavigateToWelcome} style={styles.containerFormBottom}>
             <Text style={styles.containerFormBottomText}>Entrar</Text>
           </TouchableOpacity>
         </View>
