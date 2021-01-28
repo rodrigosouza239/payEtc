@@ -22,6 +22,8 @@ import PageFoto from '../Views/PageFoto';
 
 //componentes 
 import Camera from '../components/Camera';
+import Menu from '../components/Menu';
+import Suporte from '../pages/Suporte';
 
 
 const { Navigator, Screen } = createStackNavigator();
@@ -34,9 +36,11 @@ export default function Routes() {
       <Screen name="Home" component={Home} />
       <Screen name="Login" component={Login} />
       <Screen name="Register" component={Register} />
+      <Screen name="Suporte" component={Suporte} />
       <Screen name="Welcome" component={Welcome} />
        {/* /page components/ */}
       <Screen name="Camera" component={Camera} />
+      <Screen name="Menu" component={Menu} />
       {/* /page views/ */}
       <Screen name="PageDados" component={PageDados} />
       <Screen name="PageCit" component={PageCit} />

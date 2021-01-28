@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
-import { StatusBar, View, Text, TextInput, TouchableOpacity, Image, ImageBackground} from 'react-native';
+import { StatusBar, View, Text, TextInput, TouchableOpacity, Image, ImageBackground,Button} from 'react-native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
 
 import Icon from 'react-native-vector-icons/Feather'
 
@@ -9,18 +10,24 @@ import Logo from '../../assets/icons/iconmenu.png';
 import Logo1 from '../../assets/logo.png';
 import Banner from '../../assets/icons/bannerhome.png';
 import Iconmoney from '../../assets/icons/iconmoney.png';
-
 import Iconinfo from '../../assets/icons/icon9.png';
-
 import styles from '../../styles/welcome';
 
 const Welcome = () => {
+  const { navigate } = useNavigation();
+  const navigation = useNavigation();
+
+  function hadleNavigateToMenu() {
+    navigate('Menu')
+  }
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <View style={styles.container}>
         <View style={styles.containerHeader}>
+          <TouchableOpacity onPress={hadleNavigateToMenu}>
           <Image style={styles.containerHeaderLogo} source={Logo} />
+          </TouchableOpacity>
         </View>
 
         <View style={styles.containerbody}>
