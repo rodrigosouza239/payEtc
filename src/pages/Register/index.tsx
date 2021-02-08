@@ -2,21 +2,14 @@
 import React, { useState } from 'react';
 import { StatusBar, View, Text, TextInput, TouchableOpacity, Image, Switch } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/Feather';
 
-import IconVoltar from '../../assets/icons/iconvoltar.png';
-
-import Icon1 from '../../assets/icons/icon1.png';
-import Icon2 from '../../assets/icons/icon2.png';
-import Icon3 from '../../assets/icons/icon3.png';
-import Icon4 from '../../assets/icons/icon4.png';
-import Icon6 from '../../assets/icons/icon6.png';
-
-import IconArrow from '../../assets/icons/iconarrow.png'
 
 import styles from '../../styles/register';
 
 const Register = () => {
   const { navigate } = useNavigation();
+  const navigation = useNavigation();
 
   function hadleNavigateToPageDados() {
     navigate('PageFoto')
@@ -27,43 +20,45 @@ const Register = () => {
       <StatusBar barStyle="dark-content" />
       <View style={styles.container}>
         <View style={styles.containerHeader}>
-          <Image style={styles.containerHeaderLogo} source={IconVoltar} />
+        <TouchableOpacity onPress={navigation.goBack}>
+          <Icon name="chevron-left" color="#000000" size={30} />
+        </TouchableOpacity>
         </View>
 
         <View style={styles.containerBody}>
           <Text style={styles.containerBodyTitle}>Cadastro</Text>
           <View style={styles.containerBodyForm}>
           <Text style={styles.containerBodyLabel}>Comece sua experiência</Text>
-          <Text style={styles.containerBodyLabelBold} >payEtc.</Text>
+          <Text style={styles.containerBodyLabelBold} >valePay</Text>
           </View>
           <Text style={styles.containerBodyText}>Para continuar com o seu cadastro, precisamos de algumas informações.</Text>
 
 
           <View style={styles.containerForm}>
                <TouchableOpacity style={styles.containerFormBottom}>
-               <Image style={styles.containerFormIcon1} source={Icon1} />
+                <Icon name="circle" color="#1A1A1A" size={30} />
                  <Text style={styles.containerFormTitle}>Informe seus dados</Text>
                </TouchableOpacity>
 
                <TouchableOpacity style={styles.containerFormBottom}>
-               <Image style={styles.containerFormIcons} source={Icon2} />
+               <Icon name="triangle" color="#1A1A1A" size={30} />
                  <Text style={styles.containerFormTitle}>Informe seu endereço</Text>
                </TouchableOpacity>
 
                <TouchableOpacity style={styles.containerFormBottom}>
-               <Image style={styles.containerFormIcons} source={Icon3} />
-                 <Text style={styles.containerFormTitle}>Tire uma selfie</Text>
+                <Icon name="square" color="#1A1A1A" size={30} />
+                <Text style={styles.containerFormTitle}>Tire uma selfie</Text>
                </TouchableOpacity>
 
                <TouchableOpacity style={styles.containerFormBottom}>
-               <Image style={styles.containerFormIcons} source={Icon4} />
+               <Icon name="hexagon" color="#1A1A1A" size={30} />
                  <Text style={styles.containerFormTitle}>Envie fotos dos seus documentos</Text>
                </TouchableOpacity>
 
                <View style={styles.containerFooterFormBottom}>
                <TouchableOpacity onPress={hadleNavigateToPageDados} style={styles.containerFooterBottom}>
                <Text style={styles.containerFooterBottomText}>Começar</Text>
-               <Image style={styles.containerFooterBottomIcon} source={Icon6} />
+               <Icon name="arrow-right" color="#fff" size={24} />
                </TouchableOpacity>
                </View>
           </View>

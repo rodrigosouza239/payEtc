@@ -1,8 +1,7 @@
 
 import React, { useState } from 'react';
 import { StatusBar, View, Text, TextInput, TouchableOpacity, Image, ImageBackground,Button} from 'react-native';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
-
+import {DrawerActions, useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Feather'
 
 
@@ -12,27 +11,32 @@ import Banner from '../../assets/icons/bannerhome.png';
 import Iconmoney from '../../assets/icons/iconmoney.png';
 import Iconinfo from '../../assets/icons/icon9.png';
 import styles from '../../styles/welcome';
+import RoutesMenu from '../../routes/AppStackmenu';
 
 const Welcome = () => {
   const { navigate } = useNavigation();
   const navigation = useNavigation();
 
   function hadleNavigateToMenu() {
-    navigate('Menu')
+    navigate('MenuApp')
+  }
+
+  function hadleNavigateToNotification() {
+    navigate('Notification')
   }
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <View style={styles.container}>
         <View style={styles.containerHeader}>
-          <TouchableOpacity onPress={hadleNavigateToMenu}>
+          <TouchableOpacity onPress={() => navigation.dispatch(DrawerActions.openDrawer)}>
           <Image style={styles.containerHeaderLogo} source={Logo} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.containerbody}>
           <Text style={styles.containerbodyText}>Ola,João</Text>
-          <Icon name="bell" size={23} color="#020202" />
+          <Icon name="bell" onPress={hadleNavigateToNotification} size={23} color="#020202" />
         </View>
          <View style={styles.containerForm1} >
          <ImageBackground  source={Banner} resizeMode="cover" style={styles.containerForm}>

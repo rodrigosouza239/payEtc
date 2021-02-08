@@ -14,7 +14,15 @@ const Login = () => {
   const { navigate } = useNavigation();
 
   function hadleNavigateToWelcome() {
-    navigate('Welcome')
+    navigate('MenuApp')
+  }
+
+  function hadleNavigateToForget() {
+    navigate('Forget')
+  }
+
+  function hadleNavigateToRegister() {
+    navigate('Register')
   }
 
   return (
@@ -28,7 +36,7 @@ const Login = () => {
         <View style={styles.containerForm}>
           <Text style={styles.containerFormTitle}>Acesse</Text>
           <TextInput style={styles.containerFormInput} placeholder="E-mail ou CPF" placeholderTextColor="#4D4D4D" />
-          <TextInput style={styles.containerFormInput} placeholder="Senha" placeholderTextColor="#4D4D4D" />
+          <TextInput style={styles.containerFormInput} secureTextEntry placeholder="Senha" placeholderTextColor="#4D4D4D" />
 
           <View style={styles.containerFormLembrar}>
             <Text style={styles.containerFormLembrarText}>Lembrar conta?</Text>
@@ -42,9 +50,9 @@ const Login = () => {
           </View>
 
           <View style={styles.containerFormBody}>
-            <Text style={styles.containerFormBodyText}>ou<Text style={styles.containerFormBodyTitle} > Cadastre-se no valePay</Text></Text>
+            <Text style={styles.containerFormBodyText}>ou<Text style={styles.containerFormBodyTitle} onPress={hadleNavigateToRegister} > Cadastre-se no valePay</Text></Text>
 
-            <TouchableOpacity style={styles.containerFormBodyBottom}>
+            <TouchableOpacity onPress={hadleNavigateToForget} style={styles.containerFormBodyBottom}>
               <Text style={styles.containerFormBodyBottomText}>Esqueceu a senha?</Text>
             </TouchableOpacity>
           </View>

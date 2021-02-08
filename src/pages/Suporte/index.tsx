@@ -16,18 +16,22 @@ const Suporte = () => {
     navigate('Welcome')
   }
 
+  function hadleNavigateToNotification() {
+    navigate('Notification')
+  }
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <View style={styles.container}>
          <View style={styles.containerHeader}>
              <TouchableOpacity onPress={navigation.goBack}>
-             <Icon name="arrow-left" size={23} color="#020202" />
+             <Icon name="chevron-left" size={30} color="#020202" />
              </TouchableOpacity>
          </View>
          <View style={styles.containerHeaderForm}>
            <Text style={styles.containerHeaderFormText}>Suporte</Text>
-           <Icon name="bell" size={23} color="#020202" />
+           <Icon name="bell" onPress={hadleNavigateToNotification} size={23} color="#020202" />
          </View>
 
          <View>

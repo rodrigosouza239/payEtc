@@ -1,9 +1,22 @@
 'use strict';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View,Image } from 'react-native';
-import { RNCamera } from 'react-native-camera';
 import Icon1 from '../../assets/icons/icon3.png';
 
+import { RNCamera,FaceDetector}  from 'react-native-camera'
+
+const PendingView = () => (
+  <View
+    style={{
+      flex: 1,
+      backgroundColor: 'lightgreen',
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}
+  >
+    <Text>Waiting</Text>
+  </View>
+);
 
 const PageFoto = () => {
 
@@ -16,17 +29,17 @@ async function takePicture(camera:any){
     return (
       <>
       <View style={styles.container}>
-         <RNCamera
-         style={styles.preview}
+      <RNCamera
+          style={styles.preview}
           type={RNCamera.Constants.Type.front}
           flashMode={RNCamera.Constants.FlashMode.on}
           androidCameraPermissionOptions={{
-            title: 'Permissão para usar câmera',
-            message: 'Precisamos de sua permissão para usar sua câmera',
+            title: 'Permission to use camera',
+            message: 'We need your permission to use your camera',
             buttonPositive: 'Ok',
             buttonNegative: 'Cancel',
           }}
-          />
+        />
       </View>
       <View style={styles.footer}>
          <View  style={styles.footerHeader}>

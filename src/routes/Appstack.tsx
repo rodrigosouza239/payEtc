@@ -12,7 +12,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Home from '../pages/Home';
-import Welcome from '../pages/Welcome';
+import MeusDados from '../pages/MeusDados';
 
 //import views
 import PageDados from '../Views/PageDados';
@@ -22,8 +22,12 @@ import PageFoto from '../Views/PageFoto';
 
 //componentes 
 import Camera from '../components/Camera';
-import Menu from '../components/Menu';
 import Suporte from '../pages/Suporte';
+import Forget from '../pages/Forget';
+import RoutesMenu from './AppStackmenu';
+import Pagaments from '../pages/Pagaments';
+import AddCard from '../pages/ Addcard';
+import Notification from '../pages/Notification';
 
 
 const { Navigator, Screen } = createStackNavigator();
@@ -32,15 +36,19 @@ const { Navigator, Screen } = createStackNavigator();
 export default function Routes() {
   return (
       <NavigationContainer>
-      <Navigator screenOptions={{ headerShown: false}}>
+      <Navigator  screenOptions={{ headerShown: false,}}>
       <Screen name="Home" component={Home} />
       <Screen name="Login" component={Login} />
       <Screen name="Register" component={Register} />
       <Screen name="Suporte" component={Suporte} />
-      <Screen name="Welcome" component={Welcome} />
+      <Screen name="Forget" component={Forget} />
+      <Screen name="MeusDados" component={MeusDados} />
+      <Screen name="Pagaments" component={Pagaments} />
+      <Screen name="AddCard" component={AddCard} />
+      <Screen name="Notification" component={Notification} />
        {/* /page components/ */}
       <Screen name="Camera" component={Camera} />
-      <Screen name="Menu" component={Menu} />
+      <Screen name="MenuApp" component={RoutesMenu} />
       {/* /page views/ */}
       <Screen name="PageDados" component={PageDados} />
       <Screen name="PageCit" component={PageCit} />

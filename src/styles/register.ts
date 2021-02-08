@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
   },
   containerHeader:{
       justifyContent:'flex-start',
-      padding:23,
+      padding:20,
       paddingTop:44
   },
   containerHeaderLogo:{
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   containerBody:{
     position:'absolute',
     marginTop:100,
-    paddingLeft:23,
+    paddingLeft:20,
   },
   containerBodyTitle:{
     fontSize:36,
@@ -28,20 +28,21 @@ const styles = StyleSheet.create({
   containerBodyLabel:{
     fontSize:18,
     color:'#4D4D4D',
-    fontFamily:'Roboto-Regular',
+    fontFamily:'muli-regular',
     marginBottom:10,
   },
   containerBodyLabelBold:{
     fontSize:18,
     color:'#4D4D4D',
-    fontFamily:'Roboto-Bold',
+    fontFamily:'muli-regular',
     marginBottom:10,
-    paddingLeft:10
+    paddingLeft:10,
+    fontWeight:'700'
   },
   containerBodyText:{
     fontSize:18,
     color:'#4D4D4D',
-    fontFamily:'Roboto-Regular',
+    fontFamily:'muli-regular',
     marginBottom:10,
     maxWidth:330
   },
@@ -53,27 +54,17 @@ const styles = StyleSheet.create({
   },
   containerFormBottom:{
      justifyContent:'flex-start',
-     alignItems:'flex-start',
+     alignItems:'center',
      flexDirection:'row',
-     marginBottom:30
+
+     marginBottom:40
   },
-  containerFormIcons:{
-     maxWidth:29,
-     maxHeight:27,
-     marginTop:10
-      },
-      containerFormIcon1:{
-        maxWidth:27,
-        maxHeight:27,
-        marginTop:10
-      },
   containerFormTitle:{
     fontSize:16,
     color:'#000',
-    fontFamily:'muli-extrabold',
+    fontFamily:'muli-regular',
    
      textAlign:'left',
-     marginTop:10,
      marginLeft:20
   },
   containerFooterFormBottom:{

@@ -3,11 +3,9 @@ import React, { useState } from 'react';
 import { StatusBar, View, Text, TextInput, TouchableOpacity, Image, } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-import IconVoltar from '../../assets/icons/iconvoltar.png';
-import Icon1 from '../../assets/icons/icon3.png';
-import Icon6 from '../../assets/icons/icon6.png';
-import ImageSelfie from '../../assets/icons/icon7.png';
 
+import ImageSelfie from '../../assets/icons/icon7.png';
+import Icon from 'react-native-vector-icons/Feather';
 
 import styles from '../../styles/pagefoto';
 
@@ -23,11 +21,13 @@ const PageFoto = () => {
       <StatusBar barStyle="dark-content" />
       <View style={styles.container}>
         <View style={styles.containerHeader}>
-          <Image style={styles.containerHeaderLogo} source={IconVoltar} />
+        <TouchableOpacity>
+          <Icon name="chevron-left" color="#000000" size={30} />
+        </TouchableOpacity>
         </View>
 
         <View style={styles.containerBody}>
-         <Image style={styles.containerBodyIcon} source={Icon1} />
+        <Icon name="square" color="#1A1A1A" size={30} />
           <Text style={styles.containerBodyTitle}>Tire uma selfie</Text>
         </View>
 
@@ -44,7 +44,7 @@ const PageFoto = () => {
         <Text style={styles.footerTitle}>Não se preocupe, as fotos são 100% privadas</Text>
       <TouchableOpacity onPress={hadleNavigateToCamera} style={styles.containerFormBottom}>
                 <Text style={styles.containerFormBodyBottomText}>Tirar selfie</Text>
-                <Image style={styles.containerFooterBottomIcon} source={Icon6} />
+                <Icon name="arrow-right" color="#fff" size={24} />
               </TouchableOpacity>
       </View>
     </>

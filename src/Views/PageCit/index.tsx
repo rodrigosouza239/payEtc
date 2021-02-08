@@ -1,11 +1,7 @@
 
 import React, { useState } from 'react';
 import { StatusBar, View, Text, TextInput, TouchableOpacity, Image, } from 'react-native';
-
-
-import IconVoltar from '../../assets/icons/iconvoltar.png';
-
-import Icon1 from '../../assets/icons/icon2.png';
+import Icon from 'react-native-vector-icons/Feather';
 
 
 import styles from '../../styles/pagecity';
@@ -16,11 +12,13 @@ const PageCit = () => {
       <StatusBar barStyle="dark-content" />
       <View style={styles.container}>
         <View style={styles.containerHeader}>
-          <Image style={styles.containerHeaderLogo} source={IconVoltar} />
+        <TouchableOpacity>
+          <Icon name="chevron-left" color="#000000" size={30} />
+        </TouchableOpacity>
         </View>
 
         <View style={styles.containerBody}>
-         <Image style={styles.containerBodyIcon} source={Icon1} />
+        <Icon name="triangle" color="#1A1A1A" size={30} />
           <Text style={styles.containerBodyTitle}>Informe seu endereço</Text>
         </View>
         <View style={styles.containerFormCity}>

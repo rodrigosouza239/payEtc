@@ -12,8 +12,8 @@ const styles = StyleSheet.create({
       paddingTop:44
   },
   containerHeaderLogo:{
-       width:120,
-       height:40
+       width:80,
+       height:26
   },
   containerBody:{
      position:'absolute',

@@ -1,31 +1,59 @@
 
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View,Image } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import {DrawerActions, useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Feather';
 
-const Menu = () => {
+import IconPay from '../assets/icons/iconpay.png';
+
+
+
+const CustomMenu = () => {
   const { navigate } = useNavigation();
   const navigation = useNavigation();
+
+  function hadleNavigatePagaments(){
+    navigate('Pagaments');
+  }
+
   function hadleNavigateSuporte() {
     navigate('Suporte')
+  }
+
+  function hadleNavigateMeusDados(){
+    navigate('MeusDados');
   }
 
     return (
       <>
       <View style={styles.container}>
-      <TouchableOpacity style={styles.containerBottom} onPress={navigation.goBack}>
+      <TouchableOpacity style={styles.containerBottom} onPress={() => navigation.dispatch(DrawerActions.closeDrawer)}>
              <Icon name="x" size={23} color="#ffff" />
              </TouchableOpacity>
-        <View style={styles.containerMenu}>
+
+        <View style={styles.containerMenuForm}>
+          <View style={styles.containerMenu}>
           <Text style={styles.containerMenuTitle}>Jóse Silvo</Text>
+          <TouchableOpacity onPress={hadleNavigateMeusDados} style={styles.containerMenuBottom}>
+          <Icon name="alert-circle" size={23} color="#191921" />
           <Text style={styles.containerMenuLabel}>EDITAR MEUS DADOS</Text>
+          </TouchableOpacity>
+          </View>
         </View>
-        <Text style={styles.containerMenuText}>Pagamento</Text>
+
+         <TouchableOpacity onPress={hadleNavigatePagaments}>
+         <Text style={styles.containerMenuText}>Pagamento</Text>
+         </TouchableOpacity>
+
         <TouchableOpacity onPress={hadleNavigateSuporte}>
         <Text style={styles.containerMenuText}>Suporte</Text>
         </TouchableOpacity>
+        
         <Text style={styles.containerMenuText}>Sair</Text>
+        </View>
+
+        <View style={styles.footer}>
+            <Image style={styles.footerIcon} source={IconPay} />
         </View>
       </>
     );
@@ -46,6 +74,9 @@ const styles = StyleSheet.create({
     paddingTop:80,
     marginRight:40
   },
+  containerMenuForm:{
+   marginLeft:-20
+  },
   containerMenu:{
     backgroundColor:'#fff',
     width:320,
@@ -53,7 +84,7 @@ const styles = StyleSheet.create({
     marginTop:60,
     borderTopRightRadius:21,
     borderBottomRightRadius:21,
-    marginBottom:60
+    marginBottom:60,
   },
   containerMenuTitle:{
     fontFamily:'muli-bold',
@@ -66,7 +97,6 @@ const styles = StyleSheet.create({
     fontFamily:'muli-regular',
     color:'#191921',
     fontSize:12,
-    marginLeft:30,
   },
   containerMenuText:{
     fontFamily:'muli-bold',
@@ -74,8 +104,22 @@ const styles = StyleSheet.create({
     fontSize:23,
     marginLeft:30,
     marginBottom:30,
+  },
+  footer:{
+
+  },
+  footerIcon:{
+    width:60,
+    height:70
+  },
+  containerMenuBottom:{
+  flexDirection:'row',
+  alignItems:'center',
+  justifyContent:'space-evenly',
+  paddingHorizontal:20,
+  marginRight:100
   }
   
 });
 
-export default Menu;
+export default CustomMenu;
