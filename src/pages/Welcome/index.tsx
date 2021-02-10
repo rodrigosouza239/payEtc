@@ -17,8 +17,8 @@ const Welcome = () => {
   const { navigate } = useNavigation();
   const navigation = useNavigation();
 
-  function hadleNavigateToMenu() {
-    navigate('MenuApp')
+  function hadleNavigateToBuyCard() {
+    navigate('BuyCard')
   }
 
   function hadleNavigateToNotification() {
@@ -46,7 +46,7 @@ const Welcome = () => {
                 </View>
    
                  <View style={styles.containerFormBottomCenter}>
-                 <TouchableOpacity style={styles.containerFormBottom}>
+                 <TouchableOpacity onPress={hadleNavigateToBuyCard} style={styles.containerFormBottom}>
                    <Image source={Iconmoney} style={styles.containerFormBottomIcon} />
                   <Text style={styles.containerFormBottomText}>COMPRAR CARTÃO</Text>
                 </TouchableOpacity>

@@ -3,7 +3,8 @@ import { StyleSheet } from 'react-native';
  
 const styles = StyleSheet.create({
   container:{
-    flex:1
+    flex:1, 
+    backgroundColor:'#fff'
   },
   containerHeader:{
       padding:23,
@@ -23,7 +24,7 @@ const styles = StyleSheet.create({
    justifyContent:'center',
    flexDirection:'column',
    alignItems:'center',
-   marginTop:200
+   marginTop:80
   },
   containerFormTitle:{
     fontSize:20,
@@ -85,6 +86,7 @@ footer:{
   alignItems:'center',
   flexDirection:'row',
   height:40,
+  backgroundColor:'#fff'
 },
 footerText:{
   fontSize:14,
@@ -92,6 +94,11 @@ footerText:{
   color:'#000000',
   maxWidth:300,
   textAlign:'center'
+},
+containerImagesuporte:{
+  width:260,
+  height:100,
+  marginTop:120
 }
 });
 

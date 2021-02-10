@@ -4,13 +4,14 @@ import { StatusBar, View, Text, TextInput, TouchableOpacity, Image, } from 'reac
 import { useNavigation } from '@react-navigation/native';
 
 
-import ImageSelfie from '../../assets/icons/icon7.png';
+import ImageSelfie from '../../assets/03_03.png';
 import Icon from 'react-native-vector-icons/Feather';
 
 import styles from '../../styles/pagefoto';
 
 const PageFoto = () => {
   const { navigate } = useNavigation();
+  const navigation = useNavigation();
 
   function hadleNavigateToCamera() {
     navigate('Camera')
@@ -21,7 +22,7 @@ const PageFoto = () => {
       <StatusBar barStyle="dark-content" />
       <View style={styles.container}>
         <View style={styles.containerHeader}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={navigation.goBack}>
           <Icon name="chevron-left" color="#000000" size={30} />
         </TouchableOpacity>
         </View>

@@ -32,6 +32,10 @@ async function takePicture(camera:any){
       <RNCamera
           style={styles.preview}
           type={RNCamera.Constants.Type.front}
+          faceDetectionMode={RNCamera.Constants.FaceDetection.Mode.fast}
+          faceDetectionLandmarks={RNCamera.Constants.FaceDetection.Landmarks.none}
+          faceDetectionClassifications={RNCamera.Constants.FaceDetection.Classifications.none}
+          trackingEnabled
           flashMode={RNCamera.Constants.FlashMode.on}
           androidCameraPermissionOptions={{
             title: 'Permission to use camera',

@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     alignItems:'center'
   },
   containerSelfieIcon:{
-      width:100,
+      width:140,
       height:150,
       marginBottom:60
   },

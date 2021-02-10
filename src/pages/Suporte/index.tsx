@@ -4,7 +4,7 @@ import { StatusBar, View, Text, TextInput, TouchableOpacity, Image, Switch } fro
 import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Feather';
 
-import Logo from '../../assets/logoblack.png';
+import Logo from '../../assets/02.png';
 
 import styles from '../../styles/suporte';
 
@@ -33,11 +33,9 @@ const Suporte = () => {
            <Text style={styles.containerHeaderFormText}>Suporte</Text>
            <Icon name="bell" onPress={hadleNavigateToNotification} size={23} color="#020202" />
          </View>
-
          <View>
-
+         <Image style={styles.containerImagesuporte} source={Logo} />
          </View>
-
          <View style={styles.containerForm}>
            <Text style={styles.containerFormTitle}>Precisa de ajuda?</Text>
            <Text style={styles.containerFormText}>Está perdido? Não sabe como usar? Sinta-se a vintade para nos contatar</Text>
