@@ -1,10 +1,11 @@
 
 import { StyleSheet } from 'react-native';
- 
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    backgroundColor:'#ffff'
+    backgroundColor:'#ffff',
   },
   containerHeader:{
       padding:23,
@@ -34,8 +35,8 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     alignItems:'center',
     marginTop:-30,
-    width:410,
-    height:240
+    width:wp('100%'),
+    height:224,
   },
   containerFormCenter:{
     alignItems:'flex-start',
@@ -53,8 +54,8 @@ const styles = StyleSheet.create({
   },
   containerFormInput1:{
     backgroundColor:'#FFF',
-    width:360,
-    height:43,
+    width:wp('90%'),  
+    height:40,
     paddingHorizontal:20,
     marginBottom:10,
     borderRadius:72,
@@ -85,13 +86,13 @@ const styles = StyleSheet.create({
   footer:{
       justifyContent:'center',
       alignItems:'center',
-      height:165,
+      height:hp('10%'),
       backgroundColor:'#ffff'
   },
   footerBottom:{
     
     backgroundColor:'#191921',
-    width:380,
+    width:wp('90%'),
     height:60,
     borderRadius:73,
   
@@ -104,7 +105,7 @@ const styles = StyleSheet.create({
     fontFamily:'Roboto-Bold'
   },
   containerFormInputCotation:{
-    flexDirection:'row', marginLeft:-120,
+    flexDirection:'row', marginLeft:-100,
   },
   containerFormInputCotationTITLE:{
     color:'#FFFFFF',
@@ -123,12 +124,13 @@ const styles = StyleSheet.create({
     fontFamily:'Roboto-Bold'
   },
   containerFormAdd:{
-    justifyContent:'center',alignItems:'center', marginTop:10
+    justifyContent:'center',alignItems:'center', marginTop:10,
+    marginBottom:10
   },
   containerFormAddBottom:{
     backgroundColor:'#E6E6E6',
-    width:370,
-    height:55,
+    width:wp('90%'),
+    height:60,
     borderRadius:21,
 
     flexDirection:'row',

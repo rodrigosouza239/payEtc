@@ -2,6 +2,7 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View,Image } from 'react-native';
 import Icon1 from '../../assets/icons/icon3.png';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 import { RNCamera,FaceDetector}  from 'react-native-camera'
 
@@ -71,17 +72,16 @@ const styles = StyleSheet.create({
     flex: 0,
     backgroundColor: '#E6E6E6',
     borderRadius: 100,
-    width:80,
-    height:80,
+    width:60,
+    height:60,
     borderWidth:1,
     borderColor:'#F2F2F2',
-
     justifyContent:'center',
     alignItems:'center'
   },
   footer:{
     backgroundColor:'#232328',
-    height:330,
+    height:hp('30%'),
 
     justifyContent:'center',
     alignItems:'center'
@@ -101,13 +101,13 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     alignItems:'center',
 
-    marginTop:-80
+    marginTop:20
   },
   footerTitle:{
    fontSize:20,
    color:'#fff',
    fontFamily:'muli-regular',
-   marginBottom:50
+   marginBottom:30
   },
   containerBodyIcon:{
     width:25,

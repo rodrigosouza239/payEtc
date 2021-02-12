@@ -13,8 +13,8 @@ const styles = StyleSheet.create({
       paddingTop:44
   },
   containerHeaderLogo:{
-       width:26,
-       height:23
+       width:27,
+       height:23,
   },
   containerForm:{
     width:wp('98%'),

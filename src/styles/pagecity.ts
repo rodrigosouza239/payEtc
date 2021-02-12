@@ -1,6 +1,7 @@
 
 import { StyleSheet } from 'react-native';
- 
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+
 const styles = StyleSheet.create({
   container:{
     flex:1,
@@ -38,7 +39,11 @@ const styles = StyleSheet.create({
   },
   containerFormCity:{
   justifyContent:'flex-start',
-  paddingLeft:38,
+  paddingLeft:17,
+  },
+  containerFormCityBody:{
+    width:wp('98%'),
+    height:hp('60%')
   },
   containerFormBodyBottomText:{
     fontSize:14,
@@ -46,8 +51,8 @@ const styles = StyleSheet.create({
     fontFamily:'Roboto-Bold',
   },
   containerFormBottom:{
-    width:343,
-    height:60,
+    width:wp('90%'),
+    height:55,
     backgroundColor:'#fff',
     borderRadius:73,
     borderWidth:1,
@@ -57,11 +62,11 @@ const styles = StyleSheet.create({
     alignItems:'center',
     marginBottom:10,
 
-    marginTop:10,
+    marginTop:8,
   },
   containerFormInput:{
-    width:343,
-    height:60,
+    width:wp('90%'),
+    height:55,
 
     backgroundColor:"#E6E6E6",
     borderTopLeftRadius:13,
@@ -73,8 +78,8 @@ const styles = StyleSheet.create({
     fontSize:15,
   },
   containerFormInput1:{
-    width:160,
-    height:60,
+    width:wp('40%'),
+    height:55,
 
     backgroundColor:"#E6E6E6",
     borderTopLeftRadius:13,
@@ -82,30 +87,29 @@ const styles = StyleSheet.create({
     marginBottom:20,
     paddingHorizontal:10,
     fontFamily:'muli-regular',
-    marginHorizontal:10,
+    marginHorizontal:5,
     fontSize:15,
   },
   containerFormInputCity:{
-    width:160,
-    height:60,
-
+    width:wp('40%'),
+    height:55,
     backgroundColor:"#E6E6E6",
     borderTopLeftRadius:13,
     borderTopRightRadius:13,
     marginBottom:20,
-
     paddingHorizontal:10,
     fontFamily:'muli-regular',
     fontSize:15,
   },
   containerFormCityNumero:{
     flexDirection:'row',
-    justifyContent:'space-between'
+    justifyContent:'space-between',
+    width:wp('90%'),
   },
   footer:{
     justifyContent:'center',
     alignItems:'center',
-    height:210,
+    height:hp('8%'),
     backgroundColor:'#fff',
   }
 });

@@ -6,6 +6,7 @@ import Icon from 'react-native-vector-icons/Feather';
 import styles from '../../styles/buycardoption';
 import logo from '../../assets/logoblack.png';
 import DropDownPicker from 'react-native-dropdown-picker';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 
 const BuycardOption = () => {
@@ -78,7 +79,7 @@ const BuycardOption = () => {
       borderBottomColor:'#4d4d4d',
     }}
     defaultValue={country}
-    containerStyle={{height: 60,width:370, marginTop:20}}
+    containerStyle={{height: 60,width:wp('90%'), marginTop:20}}
     style={{
       backgroundColor:'#f2f2f2',
       borderBottomRightRadius:0,
@@ -91,7 +92,7 @@ const BuycardOption = () => {
     }}
     itemStyle={{
         justifyContent: 'flex-start',
-        backgroundColor:'#f2f2f2'
+        backgroundColor:'#f2f2f2',
     }}
     onChangeItem={item => ({
       country: item // an array of the selected items
@@ -101,12 +102,14 @@ const BuycardOption = () => {
            </View>
          </View>
 
-      </View>
-      <View style={styles.footer}>
+         <View style={styles.footer}>
       <TouchableOpacity onPress={hadleNavigateToBuycardPagaments} style={styles.footerBottom}>
             <Text style={styles.footerBottomText}>Continuar para o pagamento</Text>
             </TouchableOpacity>
       </View>
+
+      </View>
+    
     </>
   );
 };

@@ -71,12 +71,13 @@ const BuycardPagaments = () => {
              <Text style={styles.containerFormAddTitle}>Adicionar pagamento</Text>
              </TouchableOpacity>
            </View>
-  
-      </View>
-      <View style={styles.footer}>
+
+           <View style={styles.footer}>
       <TouchableOpacity style={styles.footerBottom}>
             <Text style={styles.footerBottomText}>Continuar para o pagamento</Text>
             </TouchableOpacity>
+      </View>
+  
       </View>
     </>
   );

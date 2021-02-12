@@ -1,6 +1,6 @@
 
 import { StyleSheet } from 'react-native';
- 
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 const styles = StyleSheet.create({
   container:{
     flex:1,
@@ -28,6 +28,8 @@ const styles = StyleSheet.create({
   },
   containerForm:{
    marginTop:40,
+   height:40,
+   width:wp('98%')
   },
   containerFormRow:{
     justifyContent:'center',
@@ -41,20 +43,19 @@ const styles = StyleSheet.create({
   },
   containerFormCenterTitle:{
    fontFamily:'muli-regular',
-   fontSize:16,
+   fontSize:15,
    color:'#4D4D4D',
    maxWidth:300,
    marginTop:10,
 
-   marginLeft:-60
+   marginLeft:-23
   },
   containerFormInput1:{
     backgroundColor:'#191921',
-    width:380,
+    width:wp('90%'),
     height:60,
 
     paddingHorizontal:20,
-
     borderRadius:72,
 
     justifyContent:'flex-start',
@@ -63,9 +64,9 @@ const styles = StyleSheet.create({
   },
   containerFormInput1Title:{
     fontFamily:'Roboto-Medium',
-    fontSize:16,
+    fontSize:14,
     color:'#fff',
-    marginLeft:80
+    marginLeft:60
   },
   containerFormInputIconText:{
     fontFamily:'muli-bold',
@@ -85,13 +86,12 @@ const styles = StyleSheet.create({
   footer:{
       justifyContent:'center',
       alignItems:'center',
-      height:165,
-      backgroundColor:'#ffff'
+      height:hp('110%'),
   },
   footerBottom:{
     
     backgroundColor:'#191921',
-    width:380,
+    width:wp('90%'),
     height:60,
     borderRadius:73,
   

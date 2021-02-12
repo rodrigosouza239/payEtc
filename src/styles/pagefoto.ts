@@ -1,6 +1,7 @@
 
 import { StyleSheet } from 'react-native';
- 
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+
 const styles = StyleSheet.create({
   container:{
     flex:1,
@@ -57,33 +58,33 @@ const styles = StyleSheet.create({
   footer:{
     justifyContent:'center',
     alignItems:'center',
-    height:210,
-    backgroundColor:'#fff',
+    height:hp('35%')
   },
   containerSelfie:{
     justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
+    height:hp('20%')
   },
   containerSelfieIcon:{
-      width:140,
-      height:150,
+      width:110,
+      height:110,
       marginBottom:60
   },
   containerSelfieTitle:{
-        fontSize:20,
+        fontSize:17,
         color:'#000000',
         fontFamily:'muli-regular',
         textAlign:'left',
         paddingLeft:23,
   },
   containerSelfieDescrip:{
-    fontSize:20,
+    fontSize:17,
     color:'#000000',
     fontFamily:'muli-bold',
     textAlign:'left',
     paddingLeft:23,
     marginTop:30,
-    maxWidth:320,
+    maxWidth:290
   },
   footerTitle:{
          fontSize:14,
@@ -95,6 +96,9 @@ const styles = StyleSheet.create({
   containerFooterBottomIcon:{
     width:32,
     height:17,
+  },
+  containerSelfieBoby:{
+      height:hp('20%')
   }
 
 });

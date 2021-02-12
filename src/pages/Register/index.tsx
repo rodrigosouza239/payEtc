@@ -12,7 +12,7 @@ const Register = () => {
   const navigation = useNavigation();
 
   function hadleNavigateToPageDados() {
-    navigate('PageDados')
+    navigate('PageFoto')
   }
 
   return (

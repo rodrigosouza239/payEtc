@@ -36,17 +36,21 @@ const PageFoto = () => {
          <Image style={styles.containerSelfieIcon} source={ImageSelfie} />
         </View>
 
-           <Text style={styles.containerSelfieTitle}>Para tirar uma </Text>
+<View style={styles.containerSelfieBoby}>
+<Text style={styles.containerSelfieTitle}>Para tirar uma </Text>
            <Text style={styles.containerSelfieTitle}>selfie maneira lembre-se de:</Text>
            <Text style={styles.containerSelfieDescrip}>Verificar se a foto está nítida e se o ambiente possui luminosidade.</Text>  
+</View>
 
-      </View>
-      <View style={styles.footer}>
+
+<View style={styles.footer}>
         <Text style={styles.footerTitle}>Não se preocupe, as fotos são 100% privadas</Text>
       <TouchableOpacity onPress={hadleNavigateToCamera} style={styles.containerFormBottom}>
                 <Text style={styles.containerFormBodyBottomText}>Tirar selfie</Text>
                 <Icon name="arrow-right" color="#fff" size={24} />
               </TouchableOpacity>
+      </View>
+
       </View>
     </>
   );
