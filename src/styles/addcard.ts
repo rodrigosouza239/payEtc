@@ -1,6 +1,7 @@
 
 import { StyleSheet } from 'react-native';
- 
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+
 const styles = StyleSheet.create({
   container:{
     flex:1
@@ -24,11 +25,11 @@ const styles = StyleSheet.create({
   },
   containerFormInput:{
     backgroundColor:'#E6E6E6',
-    width:380,
-    height:60,
+    width:wp('90%'),
+    height:55,
 
     fontFamily:'muli-bold',
-    fontSize:15,
+    fontSize:14,
     paddingHorizontal:20,
 
     borderTopRightRadius:13,
@@ -36,10 +37,10 @@ const styles = StyleSheet.create({
   },
   containerFormRow:{
       flexDirection:'row',
-      justifyContent:'flex-start',
+      justifyContent:'center',
       alignItems:'center',
       marginTop:10,
-      left:10
+      width:wp('90%'),
   },
   containerFormCenter:{
     justifyContent:'center',
@@ -48,34 +49,28 @@ const styles = StyleSheet.create({
   },
   containerFormInput1:{
     backgroundColor:'#E6E6E6',
-    width:170,
-    height:60,
-
+    width:wp('42%'),
+    height:55,
     fontFamily:'muli-bold',
     fontSize:14,
-    paddingHorizontal:20,
-
+    paddingHorizontal:13,
     borderTopRightRadius:13,
     borderTopLeftRadius:13,
-
-    marginHorizontal:10
   },
   containerFormInput2:{
     backgroundColor:'#E6E6E6',
-    width:120,
-    height:60,
-
+    width:wp('23%'),
+    height:55,
     fontFamily:'muli-bold',
     fontSize:14,
     paddingHorizontal:20,
-
     borderTopRightRadius:13,
     borderTopLeftRadius:13,
-
+    marginLeft:5,
     marginHorizontal:10
   },
   containerFormInputIcon:{
-     left:20
+    marginLeft:20
   },
   footer:{
     justifyContent:'center',
@@ -84,7 +79,7 @@ const styles = StyleSheet.create({
   },
   footerBottom:{
     
-    width:380,
+    width:wp('90%'),
     height:60,
     borderColor:'#191921',
     borderWidth:1,

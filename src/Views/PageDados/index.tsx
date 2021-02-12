@@ -30,11 +30,12 @@ const PageDados = () => {
             <TextInput style={styles.containerFormInput} placeholder="Celular" placeholderTextColor="#4D4D4D" />
             <TextInput style={styles.containerFormInput} secureTextEntry placeholder="Senha" placeholderTextColor="#4D4D4D" />
             <TextInput style={styles.containerFormInput} secureTextEntry  placeholder="Confirme a senha" placeholderTextColor="#4D4D4D" />
-
-              <TouchableOpacity style={styles.containerFormBottom}>
+        </View>
+        <View style={styles.footer}>
+      <TouchableOpacity style={styles.containerFormBottom}>
                 <Text style={styles.containerFormBodyBottomText}>Avançar</Text>
               </TouchableOpacity>
-        </View>
+      </View>
       </View>
     </>
   );

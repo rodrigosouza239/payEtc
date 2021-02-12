@@ -1,6 +1,7 @@
 
 import { StyleSheet } from 'react-native';
- 
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+
 const styles = StyleSheet.create({
   container:{
     flex:1
@@ -8,26 +9,27 @@ const styles = StyleSheet.create({
   containerHeader:{
       justifyContent:'flex-start',
       padding:23,
-      paddingTop:44
+      paddingTop:44 
   },
   containerHeaderLogo:{
     width:80,
-    height:26
+    height:26, 
+
+    marginBottom:50
   },
   containerForm:{
-    position:'absolute',
-    marginTop:200,
-    paddingLeft:23,
-    maxWidth:340,
+    justifyContent:'center', alignItems:'center',
+    width:wp('98%'),
   },
   containerFormTitle:{
-    fontSize:47,
+    fontSize:40,
     color:'#000',
     fontFamily:'muli-extrabold',
-    marginBottom:20
+    marginBottom:30,
+    marginLeft:23
   },
   containerFormInput:{
-    width:343,
+    width:336,
     height:60,
 
     backgroundColor:"#E6E6E6",
@@ -43,7 +45,7 @@ const styles = StyleSheet.create({
     justifyContent:'space-between',
     alignItems:'center',
     flexDirection:'row',
-    marginTop:20
+    marginTop:20,
   },
   containerFormLembrarText:{
     fontSize:17,
@@ -53,27 +55,28 @@ const styles = StyleSheet.create({
   },
   containerFormLembrarSwitch:{
      marginTop:-20,
-     marginLeft:180,
+     marginLeft:170,
   },
   containerFormBody:{
-    justifyContent:'space-between',
+    justifyContent:'center',
     alignItems:'center',
-    flexDirection:'row'
+    flexDirection:'row',
   },
   containerFormBodyText:{
-    fontSize:14,
+    fontSize:13,
     color:'#000',
     fontFamily:'Roboto-Regular',
     marginBottom:20
   },
   containerFormBodyTitle:{
-    fontSize:14,
+    fontSize:13,
     color:'#0071BC',
     fontFamily:'Roboto-Bold',
     marginBottom:20
   },
   containerFormBodyBottom:{
-    marginHorizontal:50
+    marginHorizontal:2, 
+    marginLeft:50
   },
   containerFormBodyBottomText:{
     fontSize:14,
@@ -82,7 +85,7 @@ const styles = StyleSheet.create({
     marginBottom:20
   },
   containerFormBottom:{
-    width:343,
+    width:336,
     height:60,
     backgroundColor:'#191921',
     borderRadius:73,

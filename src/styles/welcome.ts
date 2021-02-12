@@ -1,9 +1,11 @@
 
 import { StyleSheet } from 'react-native';
- 
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+
 const styles = StyleSheet.create({
   container:{
-    flex:1
+    flex:1,
+    backgroundColor:'#fff'
   },
   containerHeader:{
       justifyContent:'flex-start',
@@ -15,13 +17,16 @@ const styles = StyleSheet.create({
        height:23
   },
   containerForm:{
-    width:370,
-    height:170,
-    marginTop:40
+    width:wp('98%'),
+    height:176,
+    marginTop:40,
+
+    left:9,
   },
   containerForm1:{
     justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
+    width:wp('98%'),
   },
   containerFormLeft:{
     padding:23
@@ -48,10 +53,11 @@ const styles = StyleSheet.create({
   },
   containerFormBottomCenter:{
     justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
+    marginTop:-5 ,
   },
   containerFormBottom:{
-      width:310,
+      width:280,
       height:40,
       backgroundColor:'#fff',
       borderRadius:46,
@@ -72,18 +78,18 @@ const styles = StyleSheet.create({
   },
   containerPagaments:{
   marginTop:30,
-  padding:10
   },
   containerPagamentsText:{
     fontSize:14,
     color:'#191921',
     fontFamily:'muli-regular',
-    marginHorizontal:5
+    marginHorizontal:5,
+    padding:13,
   },
   containerPagamentsForm:{
     backgroundColor:'#E6E6E6',
-    width:350,
-    height:100,
+    width:wp('94%'),
+    height:90,
     borderRadius:21,
     marginTop:20
   },
@@ -94,13 +100,13 @@ const styles = StyleSheet.create({
        alignItems:'center'
   },
   containerPagamentsFormLeftIcon:{
-        width:40,
-        height:25,
+        width:30,
+        height:20,
         backgroundColor:'#B3B3B3',
         borderRadius:18
   },
   containerPagamentsFormLeftText:{
-    fontSize:14,
+    fontSize:13,
     color:'#666666',
     fontFamily:'muli-bold',
     marginHorizontal:5
@@ -114,12 +120,12 @@ const styles = StyleSheet.create({
     alignItems:'center',
   },
   containerPagamentsFormBottomContainerBottomIcon:{
-        width:27,
-        height:26,
+        width:20,
+        height:20,
         marginHorizontal:5
   },
   containerPagamentsFormBottomContainerBottomText:{
-    fontSize:14,
+    fontSize:13,
     color:'#0071BC',
     fontFamily:'Roboto-Bold',
     marginHorizontal:5

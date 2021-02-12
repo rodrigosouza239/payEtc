@@ -4,6 +4,7 @@ import { createDrawerNavigator,DrawerContent, } from '@react-navigation/drawer';
 import Welcome from '../pages/Welcome';
 import Suport from '../pages/Suporte';
 import {DrawerActions, useNavigation } from '@react-navigation/native';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 import Icon from 'react-native-vector-icons/Feather'
 import CustomMenu from '../components/CustomMenu';
@@ -30,7 +31,7 @@ export default function RoutesMenu() {
   return (
     <Drawer.Navigator
    drawerStyle={{
-    width:380,
+    width:wp('90%'),
     borderTopRightRadius:50,
     borderBottomRightRadius:50,
     backgroundColor:'#191921',

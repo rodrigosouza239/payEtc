@@ -1,6 +1,6 @@
 
 import { StyleSheet } from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
  
 const styles = StyleSheet.create({
   container:{
@@ -15,27 +15,20 @@ const styles = StyleSheet.create({
        width:80,
        height:26
   },
-  containerBody:{
-     position:'absolute',
-     marginTop:460,
-     paddingLeft:23,
-     maxWidth:340,
-  },
   containerBodyText:{
-     fontSize:25,
+     fontSize:20,
      color:'#fff',
      fontFamily:'muli-extrabold',
+     maxWidth:240, 
+     marginLeft:-70, 
+     marginBottom:30
   },
   containerFooter:{
-    position:'absolute',
-    marginTop:640,
-    paddingLeft:23,
-
-    justifyContent:'center',
-    alignItems:'center'
+     justifyContent:'center', alignItems:'center',
+     height:hp('120%'),
   },
   containerFooterBottomBorder:{
-    width:343,
+    width:333,
     height:60,
     borderRadius:73,
     borderWidth:1,
@@ -47,7 +40,7 @@ const styles = StyleSheet.create({
     marginBottom:10
   },
   containerFooterBottom:{
-    width:343,
+    width:333,
     height:60,
     backgroundColor:'#fff',
     borderRadius:73,
@@ -75,6 +68,8 @@ const styles = StyleSheet.create({
   containerFooterBottomIconArrow:{
     width:30,
     height:20
+  },
+  containerFooterResponsi:{
   }
 });
 

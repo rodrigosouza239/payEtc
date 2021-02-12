@@ -2,6 +2,7 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View,Image } from 'react-native';
 import {DrawerActions, useNavigation } from '@react-navigation/native';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import Icon from 'react-native-vector-icons/Feather';
 
 import IconPay from '../assets/icons/iconpay.png';
@@ -109,8 +110,8 @@ const styles = StyleSheet.create({
 
   },
   footerIcon:{
-    width:60,
-    height:70
+    width:33,
+    height:40
   },
   containerMenuBottom:{
   flexDirection:'row',

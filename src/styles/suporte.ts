@@ -1,6 +1,6 @@
 
 import { StyleSheet } from 'react-native';
- 
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 const styles = StyleSheet.create({
   container:{
     flex:1, 
@@ -24,7 +24,8 @@ const styles = StyleSheet.create({
    justifyContent:'center',
    flexDirection:'column',
    alignItems:'center',
-   marginTop:80
+   marginTop:10,
+   marginBottom:30
   },
   containerFormTitle:{
     fontSize:20,
@@ -43,7 +44,8 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         alignItems:'center',
         flexDirection:'column',
-        marginTop:40
+        marginTop:30,
+       height:hp('10%')
   },
   containerFormBottomsForms:{
       width:323,
@@ -98,7 +100,7 @@ footerText:{
 containerImagesuporte:{
   width:260,
   height:100,
-  marginTop:120
+  marginTop:50
 }
 });
 

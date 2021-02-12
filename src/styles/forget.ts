@@ -1,6 +1,7 @@
 
 import { StyleSheet } from 'react-native';
- 
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+
 const styles = StyleSheet.create({
   container:{
     flex:1
@@ -17,6 +18,9 @@ containerBody:{
   paddingLeft:23,
   marginBottom:30
  },
+ containerBodyTextForm:{
+  width:wp('80%'),
+ },
  containerBodyTitle:{
    fontSize:25,
    color:'#000',
@@ -24,11 +28,11 @@ containerBody:{
    left:10
  },
  containerBodyText:{
-  fontSize:17,
+  fontSize:15,
   color:'#4D4D4D',
   fontFamily:'muli-regular',
   marginBottom:10,
-  maxWidth:360,
+  maxWidth:320,
   left:20
 },
 containerFormCenter:{
@@ -37,7 +41,7 @@ alignItems:'center',
 flexDirection:'column'
 },
 containerFormInput:{
-  width:335,
+  width:333,
   height:60,
 
   backgroundColor:"#E6E6E6",
@@ -53,7 +57,7 @@ containerFormInput:{
   fontSize:15,
 },
 containerFormBottom:{
-  width:343,
+  width:338,
   height:60,
   
   borderRadius:73,

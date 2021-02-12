@@ -32,7 +32,9 @@ const Forget = () => {
           <Text style={styles.containerBodyTitle}>Recupere sua senha</Text>
         </View>
 
+        <View style={styles.containerBodyTextForm}>
         <Text style={styles.containerBodyText}>Caso tenha esquecido sua senha, digite o CPF que você utilizou para se cadastrar no payEtc.</Text>
+        </View>
         <View style={styles.containerFormCenter}>
         <TextInput style={styles.containerFormInput} placeholder="CPF"  placeholderTextColor="#4D4D4D" />
         <TouchableOpacity  style={styles.containerFormBottom}>

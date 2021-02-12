@@ -27,13 +27,15 @@ const Home = () => {
           <Image style={styles.containerHeaderLogo} source={Logo} />
         </View>
 
-        <View style={styles.containerBody}>
-          <Text style={styles.containerBodyText}>A maneira mais segura do seu dinheiro viajar pelo mundo.</Text>
-        </View>
+
+
 
         <View style={styles.containerFooter}>
 
-          <TouchableOpacity onPress={hadleNavigateToLogin} style={styles.containerFooterBottomBorder}>
+          <Text style={styles.containerBodyText}>A maneira mais segura do seu dinheiro viajar pelo mundo.</Text>
+  
+  <View style={styles.containerFooterResponsi}>
+  <TouchableOpacity onPress={hadleNavigateToLogin} style={styles.containerFooterBottomBorder}>
             <Text style={styles.containerFooterBottomTextBorder}>Já tem cadastro?Acesse</Text>
             <Icon name="arrow-right" color="#fff" size={23} />
           </TouchableOpacity>
@@ -42,6 +44,7 @@ const Home = () => {
             <Text style={styles.containerFooterBottomText}>Cadastre-se no payEtc</Text>
             <Image style={styles.containerFooterBottomIcon} source={IconLogo} />
           </TouchableOpacity>
+  </View>
         </View>
       </ImageBackground>
     </>

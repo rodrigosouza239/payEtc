@@ -32,9 +32,9 @@ const Login = () => {
         <View style={styles.containerHeader}>
           <Image style={styles.containerHeaderLogo} source={Logo} />
         </View>
-
+        <Text style={styles.containerFormTitle}>Acesse</Text>
         <View style={styles.containerForm}>
-          <Text style={styles.containerFormTitle}>Acesse</Text>
+         
           <TextInput style={styles.containerFormInput} placeholder="E-mail ou CPF" placeholderTextColor="#4D4D4D" />
           <TextInput style={styles.containerFormInput} secureTextEntry placeholder="Senha" placeholderTextColor="#4D4D4D" />
 

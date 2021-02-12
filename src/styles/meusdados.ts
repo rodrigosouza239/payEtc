@@ -1,6 +1,7 @@
 
 import { StyleSheet } from 'react-native';
- 
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+
 const styles = StyleSheet.create({
   container:{
     flex:1
@@ -20,7 +21,8 @@ const styles = StyleSheet.create({
       fontFamily:'muli-bold',
   },
   containerForm:{
-   marginTop:40
+   marginTop:20,
+   width:wp('98%')
   },
   containerFormTitle:{
     fontSize:20,
@@ -112,13 +114,14 @@ containerFormBotomsBottomTitle:{
   textAlign:'center'
 },
 containerFormInputs:{
+  width:wp('98%'),
   justifyContent:'center',
   alignItems:'center',
   marginTop:10
 },
 containerFormInputsForm:{
   backgroundColor:'#E6E6E6',
-  width:368,
+  width:333,
   height:50,
 
   justifyContent:'center',
@@ -129,7 +132,7 @@ containerFormInputsForm:{
 },
 containerFormInputsFormTop:{
   backgroundColor:'#E6E6E6',
-  width:368,
+  width:333,
   height:50,
    
   justifyContent:'center',
@@ -143,7 +146,7 @@ containerFormInputsFormTop:{
 },
 containerFormInputsFormFooter:{
   backgroundColor:'#E6E6E6',
-  width:368,
+  width:333,
   height:50,
    
   justifyContent:'center',
@@ -157,7 +160,7 @@ containerFormInputsFormFooter:{
 },
 containerFormInputsFormRow:{
   backgroundColor:'#E6E6E6',
-  width:368,
+  width:333,
   height:50,
 
   alignItems:'flex-start',
@@ -188,7 +191,7 @@ containerFormBottomsFooteer1:{
 },
 containerFormBottomsFooteer:{
   backgroundColor:'#E6E6E6',
-  width:368,
+  width:333,
   height:90,
   borderRadius:35,
 

@@ -1,6 +1,7 @@
 
 import { StyleSheet } from 'react-native';
- 
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+
 const styles = StyleSheet.create({
   container:{
     flex:1,
@@ -19,8 +20,9 @@ const styles = StyleSheet.create({
    justifyContent:'flex-start',
    flexDirection:'row',
    alignItems:'center',
-   paddingLeft:23,
-   marginBottom:30
+   paddingLeft:30,
+   marginBottom:60,
+   height:hp('5%')
   },
   containerBodyIcon:{
     width:25,
@@ -33,9 +35,9 @@ const styles = StyleSheet.create({
     left:10
   },
   containerForm:{
-   
     justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
+    height:hp('50%')
   },
   containerFormBodyBottomText:{
     fontSize:14,
@@ -43,8 +45,8 @@ const styles = StyleSheet.create({
     fontFamily:'Roboto-Bold',
   },
   containerFormBottom:{
-    width:343,
-    height:60,
+    width:338,
+    height:50,
     backgroundColor:'#fff',
     borderRadius:73,
     borderWidth:1,
@@ -52,23 +54,27 @@ const styles = StyleSheet.create({
  
     justifyContent:'center',
     alignItems:'center',
-    marginBottom:10,
+    marginBottom:5,
 
-    marginTop:10,
+    marginTop:30,
   },
   containerFormInput:{
-    width:343,
-    height:60,
+    width:333,
+    height:50,
 
     backgroundColor:"#E6E6E6",
     borderTopLeftRadius:13,
     borderTopRightRadius:13,
-    marginBottom:20,
+    marginBottom:15,
 
     paddingHorizontal:10,
     fontFamily:'muli-regular',
     fontSize:15,
   },
+  footer:{
+    justifyContent:'center', alignItems:'center',
+    height:hp('15%')
+  }
 });
 
 export default styles;

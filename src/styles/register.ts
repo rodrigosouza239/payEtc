@@ -1,5 +1,6 @@
 
 import { StyleSheet } from 'react-native';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
  
 const styles = StyleSheet.create({
   container:{
@@ -15,24 +16,23 @@ const styles = StyleSheet.create({
        height:25
   },
   containerBody:{
-    position:'absolute',
-    marginTop:100,
-    paddingLeft:20,
+    justifyContent:'flex-start',
+    marginLeft:23, marginBottom:30
   },
   containerBodyTitle:{
-    fontSize:36,
+    fontSize:29,
     color:'#000',
     fontFamily:'muli-extrabold',
     marginBottom:20
   },
   containerBodyLabel:{
-    fontSize:18,
+    fontSize:15,
     color:'#4D4D4D',
     fontFamily:'muli-regular',
     marginBottom:10,
   },
   containerBodyLabelBold:{
-    fontSize:18,
+    fontSize:15,
     color:'#4D4D4D',
     fontFamily:'muli-regular',
     marginBottom:10,
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     fontWeight:'700'
   },
   containerBodyText:{
-    fontSize:18,
+    fontSize:15,
     color:'#4D4D4D',
     fontFamily:'muli-regular',
     marginBottom:10,
@@ -50,17 +50,20 @@ const styles = StyleSheet.create({
     flexDirection:'row'
   },
   containerForm:{
-    marginTop:20
+    marginLeft:-23,
+    height:hp('130%'),
+    width:wp('87%'),
+    marginTop:120
   },
   containerFormBottom:{
      justifyContent:'flex-start',
      alignItems:'center',
      flexDirection:'row',
 
-     marginBottom:40
+     marginBottom:30
   },
   containerFormTitle:{
-    fontSize:16,
+    fontSize:14,
     color:'#000',
     fontFamily:'muli-regular',
    
@@ -68,8 +71,9 @@ const styles = StyleSheet.create({
      marginLeft:20
   },
   containerFooterFormBottom:{
-    position:'absolute',
-    marginTop:370,
+    justifyContent:'center',
+    alignItems:'center',
+    height:hp('20%'),
   },
   containerFooterBottom:{
     width:343,
@@ -80,8 +84,7 @@ const styles = StyleSheet.create({
     justifyContent:'space-between',
     alignItems:'center',
     flexDirection:'row',
-    marginBottom:10,
-    paddingHorizontal:30
+    paddingHorizontal:30,
   },
   containerFooterBottomText:{
     fontSize:16,
